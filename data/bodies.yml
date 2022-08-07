@@ -1,0 +1,368 @@
+# Real Solar System bodies phsyical and Orbital Data
+
+#             Units
+# radius:             m
+# mass:               kg
+# stdGravParam:       m^3/s^2
+# soi:                m
+# apoapsis:           m
+# periapsis:          m
+# eccentricity:       None
+# inclination:        ° (degrees)
+# argOfPeriapsis:     °
+# ascNodeLongitude:   °
+# meanAnomaly:        rad, at 0s UT
+# sideralPeriod:      s
+
+
+# EDIT NOTES FOR CUSTOM SOLAR SYSTEMS
+
+# - Follow the exact same format (names, indentations) as used in this file
+# - Numerical data must follow the units described above
+# - Each body has a unique ID, it must be an integer between 0 and N-1, where N is the number of bodies 
+# - The sun must have the ID 0
+# - The sun does not have an `orbit` attribute
+# - The ID given to a body must be representative of its order in the solar system.
+#   For planets, it represents its order from the sun; for sattelites, its order
+#   from its attractor body.
+#   For example :
+#    Body :  Sun | Moho | Eve | Gilly | Kerbin | Mun | Minmus ...
+#    ID   :  0   | 1    | 2   | 3     | 4      | 5   | 6      ...
+# - The blocks of data describing the bodies in this file must be ordered according to their ID.
+#   For example, the sun's data are written first, followed by Moho's data... etc.
+
+
+- !!map
+  id:                 0
+  name:               Sun
+  radius:             696_342_000
+  mass:               1.9885e+30
+  stdGravParam:       1.327184555e+20
+  soi:                .inf
+  color:              0xffff00
+
+- !!map
+  id:                 1
+  name:               Mercury
+  radius:             2_439_700
+  mass:               3.3011e+23
+  stdGravParam:       2.203253173e+13
+  soi:                112_408_635
+  orbit:
+    semiMajorAxis:    57_909_050_000
+    apoapsis:         69_816_900_000
+    periapsis:        46_001_200_000
+    eccentricity:     0.205630
+    inclination:      6.35
+    argOfPeriapsis:   29.124
+    ascNodeLongitude: 48.331
+    sideralPeriod:    7_600_530
+  meanAnomaly0:       174.796
+  orbiting:           0
+  color:              0xccaf98
+
+- !!map
+  id:                 2
+  name:               Venus
+  radius:             700_000
+  mass:               4.8675e+24
+  stdGravParam:       3.248715525e+14
+  soi:                616_270_694
+  orbit:
+    semiMajorAxis:    108_208_000_000
+    apoapsis:         108_939_000_000
+    periapsis:        107_477_000_000
+    eccentricity:     0.006772
+    inclination:      2.15
+    argOfPeriapsis:   54.884
+    ascNodeLongitude: 76.680
+    sideralPeriod:    19_414_166
+  meanAnomaly0:       50.115
+  orbiting:           0
+  color:              0xeeff69
+  
+- !!map
+  id:                 3
+  name:               Earth
+  radius:             6_371_000
+  mass:               5.97237e+24
+  stdGravParam:       3.9861389091e+14
+  soi:                668_817_786
+  orbit:
+    semiMajorAxis:    149_598_023_000
+    apoapsis:         152_100_000_000
+    periapsis:        147_095_000_000
+    eccentricity:     0.0167086
+    inclination:      1.57869
+    argOfPeriapsis:   114.20783
+    ascNodeLongitude: 11.26064
+    sideralPeriod:    31_558_149
+  meanAnomaly0:       358.617
+  orbiting:           0
+  color:              0x11e7bf
+- !!map
+  id:                 4
+  name:               Luna
+  radius:             1_737_400
+  mass:               7.342e+22
+  stdGravParam:       4.90027106e+12
+  soi:                66_168_199
+  orbit:
+    semiMajorAxis:    384_399_000
+    apoapsis:         405_400_000
+    periapsis:        362_600_000
+    eccentricity:     0.0549
+    inclination:      5.145
+    argOfPeriapsis:   0
+    ascNodeLongitude: 11.633
+    sideralPeriod:    2_360_591
+  meanAnomaly0:       358.617
+  orbiting:           3
+  color:              0xcecece
+- !!map
+  id:                 5
+  name:               Mars
+  radius:             3_389_500
+  mass:               6.4171e+23
+  stdGravParam:       4.282965053e+13
+  soi:                577_224_319
+  orbit:
+    semiMajorAxis:    227_939_366_000
+    apoapsis:         249_261_000_000
+    periapsis:        206_650_000_000
+    eccentricity:     0.0934
+    inclination:      1.63
+    argOfPeriapsis:   286.5
+    ascNodeLongitude: 49.57854
+    sideralPeriod:    59_355_072
+  meanAnomaly0:       358.617
+  orbiting:           0
+  color:              0xeb5136
+- !!map
+  id:                 6
+  name:               Deimos
+  radius:             6_200
+  mass:               1.4762e+15
+  stdGravParam:       98_526
+  soi:                21
+  orbit:
+    semiMajorAxis:    23_463_200
+    apoapsis:         23_470_900
+    periapsis:        23_455_500
+    eccentricity:     0.00033
+    inclination:      0.93
+    argOfPeriapsis:   90
+    ascNodeLongitude: 0
+    sideralPeriod:    109_123
+  meanAnomaly0:       306.5924
+  orbiting:           5
+  color:              0xcecece
+- !!map
+  id:                 7
+  name:               Phobos
+  radius:             11_266
+  mass:               1.0659e+16
+  stdGravParam:       711_413
+  soi:                7_247
+  orbit:
+    semiMajorAxis:    9_376_000
+    apoapsis:         9_517_580
+    periapsis:        9_234_420
+    eccentricity:     0.0151
+    inclination:      1.093
+    argOfPeriapsis:   90
+    ascNodeLongitude: 0
+    sideralPeriod:    27_553
+  meanAnomaly0:       90
+  orbiting:           5
+  color:              0xcecece
+- !!map
+  id:                 8
+  name:               Ceres
+  radius:             469_730
+  mass:               9.3835e+20
+  stdGravParam:       6.26282940e+10
+  soi:                77_079_854
+  orbit:
+    semiMajorAxis:    414_386_101_840
+    apoapsis:         445_801_654_690
+    periapsis:        381_474_570_290
+    eccentricity:     0.0785
+    inclination:      9.20
+    argOfPeriapsis:   73.6
+    ascNodeLongitude: 80.3
+    sideralPeriod:    145_152_000
+  meanAnomaly0:       291.4
+  orbiting:           0
+  color:              0xcebfb1
+- !!map
+  id:                 9
+  name:               2 Pallas
+  radius:             256_000
+  mass:               2.04e+20
+  stdGravParam:       1.3615572e+10
+  soi:                41_878_474
+  orbit:
+    semiMajorAxis:    414_523_372_850
+    apoapsis:         510_128_739_090
+    periapsis:        318_643_464_590
+    eccentricity:     0.23
+    inclination:      34.43
+    argOfPeriapsis:   310.7
+    ascNodeLongitude: 172.9
+    sideralPeriod:    145_575_360
+  meanAnomaly0:       229.5
+  orbiting:           0
+  color:              0xcebfb1
+- !!map
+  id:                 10
+  name:               4 Vesta
+  radius:             525_400
+  mass:               2.59076e+20
+  stdGravParam:       1.7291509468e+10
+  soi:                39_276_006
+  orbit:
+    semiMajorAxis:    353_318_755_040
+    apoapsis:         384_672_972_760
+    periapsis:        321_966_033_300
+    eccentricity:     0.08874
+    inclination:      5.58
+    argOfPeriapsis:   151.19853
+    ascNodeLongitude: 103.85136
+    sideralPeriod:    114_544_800
+  meanAnomaly0:       20.86384
+  orbiting:           0
+  color:              0xcebfb1
+- !!map
+  id:                 11
+  name:               10 Hygiea
+  radius:             216_750
+  mass:               87.4e+18
+  stdGravParam:       5.8333382e+9
+  soi:                33_826_480
+  orbit:
+    semiMajorAxis:    469_961_710_804
+    apoapsis:         522_814_638_522
+    periapsis:        417_108_783_086
+    eccentricity:     0.1125
+    inclination:      3.8316
+    argOfPeriapsis:   312.32
+    ascNodeLongitude: 283.20
+    sideralPeriod:    175_720_320
+  meanAnomaly0:       152.18
+  orbiting:           0
+  color:              0xcebfb1
+- !!map
+  id:                 12
+  name:               Jupiter
+  radius:             69_911_000
+  mass:               1.8982e+27
+  stdGravParam:       1.266915626e+17
+  soi:                48_213_932_809
+  orbit:
+    semiMajorAxis:    778_477_399_549
+    apoapsis:         816_355_580_410
+    periapsis:        740_599_218_687
+    eccentricity:     0.0489
+    inclination:      0.32
+    argOfPeriapsis:   273.867
+    ascNodeLongitude: 100.464
+    sideralPeriod:    374_335_776
+  meanAnomaly0:       20.020
+  orbiting:           0
+  color:              0xda8d44
+- !!map
+  id:                 13
+  name:               Io
+  radius:             1_821_600
+  mass:               8.931938e+22
+  stdGravParam:       5.9614433793e+12
+  soi:                7_835_109
+  orbit:
+    semiMajorAxis:    421_700_000
+    apoapsis:         423_400_000
+    periapsis:        420_000_000
+    eccentricity:     0.0041
+    inclination:      0.05
+    argOfPeriapsis:   0
+    ascNodeLongitude: 90
+    sideralPeriod:    152_853
+  meanAnomaly0:       20.020
+  orbiting:           12
+  color:              0xb8a957
+- !!map
+  id:                 14
+  name:               Europa
+  radius:             1_560_800
+  mass:               4.799844e+22
+  stdGravParam:       3.2035598809e+12
+  soi:                6_111_638
+  orbit:
+    semiMajorAxis:    421_700_000
+    apoapsis:         423_400_000
+    periapsis:        420_000_000
+    eccentricity:     0.009
+    inclination:      0.470
+    argOfPeriapsis:   0
+    ascNodeLongitude: 90
+    sideralPeriod:    306_822
+  meanAnomaly0:       90
+  orbiting:           12
+  color:              0xb8a957
+- !!map
+  id:                 15
+  name:               Ganymede
+  radius:             2_634_100
+  mass:               1.4819e+23
+  stdGravParam:       9.89064517e+12
+  soi:                9_723_258
+  orbit:
+    semiMajorAxis:    1_069_200_000
+    apoapsis:         1_071_600_000 
+    periapsis:        1_069_200_000
+    eccentricity:     0.0013
+    inclination:      0.20
+    argOfPeriapsis:   0
+    ascNodeLongitude: 90
+    sideralPeriod:    618_153
+  meanAnomaly0:       0
+  orbiting:           12
+  color:              0xa0978b
+- !!map
+  id:                 16
+  name:               Callisto
+  radius:             2_410_300
+  mass:               1.075938e+23
+  stdGravParam:       7.1811329934e+12
+  soi:                37_684_194
+  orbit:
+    semiMajorAxis:    1_882_700_000
+    apoapsis:         1_897_000_000 
+    periapsis:        1_869_000_000
+    eccentricity:     0.0074
+    inclination:      0.192
+    argOfPeriapsis:   0
+    ascNodeLongitude: 90
+    sideralPeriod:    1_441_931
+  meanAnomaly0:       90
+  orbiting:           12
+  color:              0x7d7064
+- !!map
+  id:                 17
+  name:               Saturn
+  radius:             58_232_000
+  mass:               5.6834e+26
+  stdGravParam:       3.793271662e+16
+  soi:                54_807_731_024
+  orbit:
+    semiMajorAxis:    1_433_536_555_769
+    apoapsis:         1_514_498_923_392
+    periapsis:        1_352_544_268_572
+    eccentricity:     0.0565
+    inclination:      0.93
+    argOfPeriapsis:   339.392
+    ascNodeLongitude: 113.665
+    sideralPeriod:    929596608
+  meanAnomaly0:       317.020
+  orbiting:           0
+  color:              0x7d7064
